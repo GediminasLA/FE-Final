@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    border-bottom: solid;
+    height: 30px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-top: 35px;
+}
+
+header > button {
+    height: 40px;
+    width: 100px;
+}
+
+main {
+    padding: 5% 10%;
+}
+
+.itemWindow {
+    height: 200px;
+    width: 100%;
+    border: solid 1px;
+    padding: 20px;
+    border-radius: 1em;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.itemInfo{
+    margin-left: 20px;
+}
+
+
+.itemImage {
+    height: 200px;
+    width: 200px;
+}
+
+.name, .price, .city, .description {
+    margin-bottom: 10px;
+}
+
+.name, .price, .city {
+    font-weight: 700;
+}
+
+.itemWindow:hover {
+    transition: transform 0.3s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+button {
+    font-weight: 700;
+    color: black;
+    background-color: tomato;
+    border-radius: 1.2em;
+    border-style: none;
+}
+
+button:hover {
+    transition: transform 0.3s;
+    transform: scale(1.1);
+    cursor: pointer;
+}
