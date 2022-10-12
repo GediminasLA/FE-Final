@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background: radial-gradient(circle, rgba(229,245,117,1) 0%, rgba(233,233,233,1) 100%);
 }
 
 header {
@@ -9,6 +10,7 @@ header {
     padding: 20px 10%;
     border-bottom: solid;
     height: 30px;
+    background: radial-gradient(circle, rgba(230,238,174,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 .logo {
@@ -37,6 +39,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
 }
 
 .itemInfo{
@@ -65,12 +68,15 @@ button {
     background-color: tomato;
     border-radius: 1.2em;
     border-style: none;
+    transition: transform 0.3s;
 }
 
 button:hover {
-    transition: transform 0.3s;
     transform: scale(1.1);
     cursor: pointer;
 }
 
-
+.itemImage {
+    width: max(600px);
+    height: max(600px);
+}
