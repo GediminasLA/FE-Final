@@ -5,25 +5,23 @@ const main = document.querySelector('main');
 const itemID = sessionStorage.getItem('productID');
 
 const updateUI = (data) => {
-
-    data.forEach( el => {
+        
         let itemBox = 
-        `<div class="itemWindow" id="${el.id}">
-            <img src="${el.img}" class="itemImage">
+        `<div class="itemWindow" id="${data.id}">
+            <img src="${data.img}" class="itemImage">
             <div class="itemInfo">
-                <div class="name">${el.name}</div>
-                <div class="price">Price: ${el.price}</div>
-                <div class="city">${el.location}</div>
-                <div class="description">${el.description}</div>
+                <div class="name">${data.name}</div>
+                <div class="price">Price: ${data.price}</div>
+                <div class="city">${data.location}</div>
+                <div class="description">${data.description}</div>
             </div>
             <button class="removeItem" onclick="removeFn()"> Remove Listing</button>
         </div>
        `
         main.innerHTML += itemBox;
-    })
-}
+    }
 
-fetch(`https://63443e22242c1f347f822a21.mockapi.io/objects?id=${itemID}`)
+fetch(`https://63443e22242c1f347f822a21.mockapi.io/objects/${itemID}`)
 .then(data => data.json())
 .then(data => updateUI(data))
 
